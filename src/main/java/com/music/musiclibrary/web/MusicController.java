@@ -1,10 +1,7 @@
 package com.music.musiclibrary.web;
 
 import com.music.musiclibrary.model.Music;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
 
@@ -12,8 +9,8 @@ import java.util.Arrays;
 @RequestMapping("/music")
 public class MusicController {
 
-    @GetMapping("/{id}")
-    public Music getMusicCollection(@PathVariable int id){
+    @GetMapping/*("/{id}")*/
+    public Music getMusicCollection(@RequestParam("id") int id){
         Music music = new Music();
         if (id == 1){
             music.setId(1);
