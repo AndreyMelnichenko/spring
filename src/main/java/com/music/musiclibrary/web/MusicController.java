@@ -9,7 +9,7 @@ import java.util.Arrays;
 @RequestMapping("/music")
 public class MusicController {
 
-    @GetMapping/*("/{id}")*/
+    @GetMapping
     public Music getMusicCollection(@RequestParam("id") int id){
         Music music = new Music();
         if (id == 1){
